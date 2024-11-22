@@ -1,32 +1,30 @@
+// src/components/MainContent.js
 import React, { useState } from "react";
-import axios from "axios";
+import ToucanImage from "../assets/Toucan.webp"; // Add a toucan image in the assets folder
 
-const MainContent = () => {
-  const [response, setResponse] = useState("Welcome to Curious Toucan!");
-  const [category, setCategory] = useState("");
+function MainContent() {
+  const [message, setMessage] = useState("Something went wrong. Please try again.");
 
-  const fetchResponse = async (query) => {
-    try {
-      const result = await axios.post("YOUR_API_ENDPOINT", { category: query });
-      setResponse(result.data.message); // Adjust based on API response structure
-    } catch (error) {
-      setResponse("Something went wrong. Please try again.");
-    }
+  const handleButtonClick = (newMessage) => {
+    setMessage(newMessage);
   };
 
   return (
     <main className="main-content">
-      <div className="response-bubble">
-        <p>{response}</p>
+      <div className="toucan-container">
+        <img src={ToucanImage} alt="Toucan" className="toucan-image" />
+        <div className="text-bubble">
+          <p>{message}</p>
+        </div>
       </div>
       <div className="button-container">
-        <button onClick={() => fetchResponse("physics")}>Physics</button>
-        <button onClick={() => fetchResponse("biology")}>Biology</button>
-        <button onClick={() => fetchResponse(category)}>Give me more details!</button>
-        <button onClick={() => fetchResponse(category)}>Give me more like this!</button>
+        <button onClick={() => handleButtonClick("Physics Content Coming Soon!")}>Physics</button>
+        <button onClick={() => handleButtonClick("Biology Content Coming Soon!")}>Biology</button>
+        <button onClick={() => handleButtonClick("Here are more details!")}>Give me more details!</button>
+        <button onClick={() => handleButtonClick("Here’s more like this!")}>Give me more like this!</button>
       </div>
     </main>
   );
-};
+}
 
 export default MainContent;
