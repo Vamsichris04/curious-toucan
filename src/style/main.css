@@ -3,6 +3,8 @@
 .main-content {
     padding: 40px;
     position: relative;
+    background-color: #f9f9f9; /* Added background color for aesthetics */
+    border-radius: 10px; /* Added border radius for a softer look */
 }
 
 .logo {
@@ -61,6 +63,7 @@
     justify-content: center;
     font-size: 0.9rem;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for smoother hover effect */
 }
 
 .circle-button:hover {
