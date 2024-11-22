@@ -1,27 +1,33 @@
 // src/components/MainContent.js
 import React, { useState } from "react";
-import ToucanImage from "../assets/Toucan.webp"; // Add a toucan image in the assets folder
+import ToucanImage from "../assets/toucan.webp"; // Add your Toucan image in the assets folder
 
 function MainContent() {
-  const [message, setMessage] = useState("Something went wrong. Please try again.");
+  const [message, setMessage] = useState(
+    "Hello there, adventurers! I'm Curious Toucan, and I'm so excited to see you at Discovery World! Let’s get curious together—tou-can do it!"
+  );
 
-  const handleButtonClick = (newMessage) => {
-    setMessage(newMessage);
+  const handleButtonClick = (text) => {
+    setMessage(text);
   };
 
   return (
     <main className="main-content">
-      <div className="toucan-container">
-        <img src={ToucanImage} alt="Toucan" className="toucan-image" />
-        <div className="text-bubble">
+      <div className="bubble-container">
+        <div className="speech-bubble">
           <p>{message}</p>
         </div>
+        <img src={ToucanImage} alt="Toucan" className="toucan-image" />
       </div>
       <div className="button-container">
-        <button onClick={() => handleButtonClick("Physics Content Coming Soon!")}>Physics</button>
-        <button onClick={() => handleButtonClick("Biology Content Coming Soon!")}>Biology</button>
-        <button onClick={() => handleButtonClick("Here are more details!")}>Give me more details!</button>
-        <button onClick={() => handleButtonClick("Here’s more like this!")}>Give me more like this!</button>
+        <button onClick={() => handleButtonClick("Physics is fascinating! Let’s explore the universe.")}>Physics</button>
+        <button onClick={() => handleButtonClick("Biology is the study of life. Ready to dive in?")}>Biology</button>
+        <button onClick={() => handleButtonClick("Here are more details about the amazing world around us!")}>
+          Give me more details!
+        </button>
+        <button onClick={() => handleButtonClick("Here’s more content like this. Stay curious!")}>
+          Give me more like this!
+        </button>
       </div>
     </main>
   );
