@@ -1,0 +1,51 @@
+/* General App Styling */
+.app {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Styling */
+  .header {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+  }
+  
+  /* Main Content Styling */
+  .main-content {
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  .response-bubble {
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .button-container button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
