@@ -1,7 +1,7 @@
 // src/components/MainContent.js
 import React, { useState } from "react";
 import ToucanImage from "../assets/Toucan.webp"; // Replace with correct path
-import Logo from "../assets/mke_discovery_world_logo.png"; // Replace with your logo's path
+import Logo from "../assets/Discovery_world_logo.png"; // Replace with your logo's path
 
 function MainContent() {
   const [message, setMessage] = useState(
