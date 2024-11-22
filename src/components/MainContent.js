@@ -1,6 +1,6 @@
 // src/components/MainContent.js
 import React, { useState } from "react";
-import ToucanImage from "../assets/Toucan.webp"; // Add your Toucan image in the assets folder
+import ToucanImage from "../assets/Toucan.webp"; // Ensure this path is correct
 
 function MainContent() {
   const [message, setMessage] = useState(
@@ -18,16 +18,36 @@ function MainContent() {
           <p>{message}</p>
         </div>
         <img src={ToucanImage} alt="Toucan" className="toucan-image" />
-      </div>
-      <div className="button-container">
-        <button onClick={() => handleButtonClick("Physics is fascinating! Let’s explore the universe.")}>Physics</button>
-        <button onClick={() => handleButtonClick("Biology is the study of life. Ready to dive in?")}>Biology</button>
-        <button onClick={() => handleButtonClick("Here are more details about the amazing world around us!")}>
-          Give me more details!
-        </button>
-        <button onClick={() => handleButtonClick("Here’s more content like this. Stay curious!")}>
-          Give me more like this!
-        </button>
+        <div className="button-container">
+          <button
+            className="circle-button"
+            style={{ top: "-50px", left: "50%" }}
+            onClick={() => handleButtonClick("Physics is fascinating! Let’s explore the universe.")}
+          >
+            Physics
+          </button>
+          <button
+            className="circle-button"
+            style={{ top: "50%", right: "-50px" }}
+            onClick={() => handleButtonClick("Biology is the study of life. Ready to dive in?")}
+          >
+            Biology
+          </button>
+          <button
+            className="circle-button"
+            style={{ bottom: "-50px", left: "50%" }}
+            onClick={() => handleButtonClick("Here are more details about the amazing world around us!")}
+          >
+            Details
+          </button>
+          <button
+            className="circle-button"
+            style={{ top: "50%", left: "-50px" }}
+            onClick={() => handleButtonClick("Here’s more content like this. Stay curious!")}
+          >
+            More
+          </button>
+        </div>
       </div>
     </main>
   );

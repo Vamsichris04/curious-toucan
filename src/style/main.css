@@ -1,4 +1,5 @@
 /* src/style/main.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,30 +8,15 @@ body {
     text-align: center;
   }
   
-  .header {
-    padding: 20px;
-    background-color: #ffffff;
-    border-bottom: 2px solid #ddd;
-  }
-  
-  .header h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin: 0;
-  }
-  
-  .header .world {
-    color: #4a4ae0;
-  }
-  
   .main-content {
     padding: 40px;
+    position: relative;
   }
   
   .bubble-container {
     position: relative;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
   
   .speech-bubble {
@@ -58,27 +44,40 @@ body {
   
   .toucan-image {
     position: absolute;
-    bottom: -20px;
-    right: -40px;
-    max-width: 100px;
+    top: 80%;
+    right: -50px;
+    width: 100px;
+    transform: translateY(-50%);
   }
   
   .button-container {
-    margin-top: 20px;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    top: 10px;
   }
   
-  button {
+  .circle-button {
+    position: absolute;
     background-color: #4a4ae0;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin: 5px;
+    border-radius: 50%;
+    padding: 15px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
     cursor: pointer;
-    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
   }
   
-  button:hover {
+  .circle-button:hover {
     background-color: #3737b0;
+    transform: scale(1.1);
   }
   
