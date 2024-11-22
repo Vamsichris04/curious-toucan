@@ -1,6 +1,6 @@
 // src/components/MainContent.js
 import React, { useState } from "react";
-import ToucanImage from "../assets/toucan.webp"; // Add your Toucan image in the assets folder
+import ToucanImage from "src\assets\Toucan.webp"; // Add your Toucan image in the assets folder
 
 function MainContent() {
   const [message, setMessage] = useState(
