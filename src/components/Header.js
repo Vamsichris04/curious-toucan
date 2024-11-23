@@ -27,7 +27,7 @@ function Header() {
           src={usaFlag}
           alt="English"
           className="flag"
-          title="Switch to English"
+          title="Switch to Englishh"
         />
         <img
           src={spainFlag}
