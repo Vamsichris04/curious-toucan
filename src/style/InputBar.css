@@ -1,0 +1,65 @@
+.input-bar {
+    position: fixed; /* Keeps the input bar at the bottom of the viewport */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ensures it spans the full width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Adds space around the bar (left and right) */
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+    z-index: 1000; /* Ensures it appears above other elements */
+    box-sizing: border-box; /* Prevents padding from affecting overall size */
+    /* Adding box-shadow for a subtle border effect */
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-field {
+    flex: 0.7; /* Makes the text field smaller relative to other elements */
+    padding: 8px 10px; /* Reduces inner padding */
+    font-size: 14px; /* Keeps font size readable */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 15px; /* Space between the input field and buttons */
+    background-color: #fff; /* Adds white background to the text input */
+  }
+  
+  .audio-button {
+    background-color: #4caf50; /* Green color for the microphone */
+    border: none;
+    color: white;
+    width: 120px; /* Rectangular shape - wider width */
+    height: 40px; /* Standard height for the rectangular button */
+    font-size: 16px; /* Adjusted font size */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer;
+    margin-left: 10px; /* Space between the buttons */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .audio-button:hover {
+    background-color: #ff5722; /* Hover effect for the microphone button */
+  }
+  
+  .send-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px; /* Adds spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .send-button:hover {
+    background-color: #388e3c; /* Hover effect for the send button */
+  }
+  
