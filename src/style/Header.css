@@ -41,7 +41,7 @@
     letter-spacing: 2px; /* Spacing between the letters */
     display: block; /* Ensures DISCOVERY is treated as a block element */
     line-height: 1.2; /* Adjust spacing between lines */
-    
+    font-style: italic; /* Makes DISCOVERY italic */
   }
   
   .world {
