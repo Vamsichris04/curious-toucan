@@ -38,6 +38,7 @@
     font-weight: 900; /* Make DISCOVERY bold */
     margin: 0;
     text-transform: uppercase; /* Ensure DISCOVERY is all uppercase */
+    letter-spacing: 5px; /* Spacing between the letters */
     display: block; /* Ensures DISCOVERY is treated as a block element */
     line-height: 1.2; /* Adjust spacing between lines */
     
@@ -49,8 +50,10 @@
     color: transparent; /* Transparent fill */
     -webkit-text-stroke: 1px #4a4ae0; /* Blue outline */
     font-weight: 700;
+    margin-top: 0; /* No extra margin */
     text-transform: uppercase; /* Ensure WORLD is all uppercase */
     margin-top: -10px; /* Optional: Adjust spacing between lines */
+    letter-spacing: 5px; /* Spacing between the letters */
     display: block; /* Ensures WORLD is treated as a block element */
   }
   
