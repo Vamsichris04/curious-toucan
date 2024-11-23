@@ -17,6 +17,13 @@ const InputBar = ({ onSendMessage, onSendAudio }) => {
     onSendAudio();
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" && message.trim()) {
+      onSendMessage(message); // Trigger sending the message
+      setMessage(""); // Clear the input field
+    }
+  };
+
   return (
     <div className="input-bar">
       <button className="audio-button" onClick={handleAudioClick}>
@@ -28,6 +35,7 @@ const InputBar = ({ onSendMessage, onSendAudio }) => {
         placeholder="Type a message..."
         value={message}
         onChange={handleInputChange}
+        onKeyDown={handleKeyDown} // Listen for Enter key press
       />
       <button className="send-button" onClick={handleSendClick}>
         ➤
