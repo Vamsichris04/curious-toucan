@@ -4,6 +4,7 @@ import logo from "../assets/Discovery_world_logo.png";
 import usaFlag from "../assets/usa.jpeg";
 import spainFlag from "../assets/spain.jpeg";
 
+
 function Header() {
   return (
     <header className="header">
