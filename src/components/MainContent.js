@@ -1,61 +1,37 @@
 import React, { useState } from "react";
-import ToucanImage from "../assets/Toucan.webp";
-import Logo from "../assets/Discovery_world_logo.png";
+import "../style/MainContent.css";
+import ToucanImage from "../assets/Toucan.png";
+import AstronautImage from "../assets/astronaut.jpeg";
 
 function MainContent() {
   const [message, setMessage] = useState(
-    "Hello there, adventurers! I'm Curious Toucan, and I'm so excited to see you at Discovery World! Let's get curious together—tou-can do it!"
+    "Hello there, adventurers! I'm Curious Toucan, and I'm so excited to see you at Discovery World! Let’s get curious together—tou-can do it!"
   );
-
-  const handleButtonClick = (text) => {
-    setMessage(text);
-  };
 
   return (
     <main className="main-content">
-      <img src={Logo} alt="Discovery World Logo" className="logo" />
-      <div className="content-wrapper">
+      <div className="bubble-container">
+        <div className="speech-bubble">
+          <p>{message}</p>
+        </div>
+        <img src={ToucanImage} alt="Toucan" className="toucan-image" />
         <div className="button-container">
-          <button
-            className="circle-button"
-            style={{ top: "0", left: "50%" }}
-            onClick={() => handleButtonClick("Physics is fascinating! Let's explore the universe.")}
-          >
-            Physics
-          </button>
-          <button
-            className="circle-button"
-            style={{ top: "50%", right: "0" }}
-            onClick={() => handleButtonClick("Biology is the study of life. Ready to dive in?")}
-          >
-            Biology
-          </button>
-          <button
-            className="circle-button"
-            style={{ bottom: "0", left: "50%" }}
-            onClick={() => handleButtonClick("Here are more details about the amazing world around us!")}
-          >
-            Details
-          </button>
-          <button
-            className="circle-button"
-            style={{ top: "50%", left: "0" }}
-            onClick={() => handleButtonClick("Here's more content like this. Stay curious!")}
-          >
-            More
-          </button>
-          
-          <div className="center-content">
-            <div className="speech-bubble">
-              <p>{message}</p>
-            </div>
-            <img src={ToucanImage} alt="Toucan" className="toucan-image" />
-          </div>
+          <button onClick={() => setMessage("Translate functionality coming soon!")}>TRANSLATE</button>
+          <button onClick={() => setMessage("Challenge accepted! Making it harder...")}>MAKE IT HARDER</button>
+          <button onClick={() => setMessage("Simplifying things for you...")}>MAKE IT EASIER</button>
+          <button onClick={() => setMessage("Explore related topics!")}>RELATED TOPICS</button>
+        </div>
+      </div>
+      <div className="astronaut-container">
+        <img src={AstronautImage} alt="Astronaut" className="astronaut-image" />
+        <div className="audio-box">
+          <div className="audio-line"></div>
+          <div className="audio-line"></div>
+          <div className="audio-line"></div>
         </div>
       </div>
     </main>
   );
 }
-
 
 export default MainContent;
