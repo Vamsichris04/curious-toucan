@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../style/MainContent.css";
-import ToucanImage from "../assets/Toucan.webp";
+import ToucanImage from "../assets/Toucan.png";
 import AstronautImage from "../assets/astronaut.jpeg";
 
 function MainContent() {

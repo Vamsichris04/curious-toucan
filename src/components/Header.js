@@ -6,6 +6,7 @@ import '../style/Header.css'; // If Header.css is in a 'styles' folder within 's
 function Header() {
   return (
     <header className="header">
+      <img src={logo} alt="Discovery World Logo" className="logo" />
       <h1>DISCOVERY <span className="world">WORLD</span></h1>
     </header>
   );

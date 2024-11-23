@@ -1,43 +1,46 @@
+/* Main content styles */
 .main-content {
   padding: 40px;
   position: relative;
 }
 
-.bubble-container {
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
-}
-
+/* Speech bubble for Toucan */
 .speech-bubble {
   background: white;
   border: 4px solid black;
   border-radius: 20px;
-  padding: 30px;
-  width: 450px;
-  font-size: 1.2rem;
+  padding: 20px;
+  width: 300px;
+  font-size: 1rem;
   text-align: left;
   line-height: 1.5;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 200px; /* Positioned above the Toucan */
+  right: 30px; /* Aligned with the Toucan */
 }
 
 .speech-bubble:after {
   content: "";
   position: absolute;
-  bottom: -20px;
-  left: 20%;
-  border-width: 20px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
   border-style: solid;
   border-color: black transparent transparent transparent;
 }
 
+/* Toucan image */
 .toucan-image {
-  position: absolute;
-  bottom: -60px;
-  right: -40px;
-  width: 120px;
+  position: fixed;
+  bottom: 150px; /* Fixed distance from the bottom of the screen */
+  right: 30px; /* Fixed distance from the right of the screen */
+  max-width: 150px; /* Same size as the Astronaut */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 10; /* Ensure it's above other elements */
 }
 
+/* Buttons remain unchanged */
 .button-container button {
   background-color: #4a4ae0;
   color: white;
@@ -49,16 +52,19 @@
   cursor: pointer;
 }
 
+/* Astronaut container */
 .astronaut-container {
   display: flex;
   align-items: center;
   margin-top: 30px;
+  
 }
 
 .astronaut-image {
   max-width: 150px;
 }
 
+/* Audio box */
 .audio-box {
   margin-left: 20px;
   padding: 10px;
