@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../styles/MainContent.css";
-import ToucanImage from "../assets/toucan.png";
-import AstronautImage from "../assets/astronaut.png";
+import "../style/MainContent.css";
+import ToucanImage from "../assets/Toucan.webp";
+import AstronautImage from "../assets/astronaut.jpeg";
 
 function MainContent() {
   const [message, setMessage] = useState(

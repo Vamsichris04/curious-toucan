@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Header.css";
-import Logo from "../assets/logo.png"; // Path to the logo
+import logo from "../assets/Discovery_world_logo.png";
 import '../styles/Header.css'; // If Header.css is in a 'styles' folder within 'src'
 
 function Header() {
