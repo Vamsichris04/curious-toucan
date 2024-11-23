@@ -5,6 +5,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+NOTE: You need Node.js installed to run npm commands
+
+## Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+- **Node.js**: [Download and install Node.js](https://nodejs.org/). This will also install npm (Node Package Manager), which is required to run the project.
+
+Once Node.js is installed, you need to install the project dependencies by running:
+
+**npm install**
 
 ### `npm start`
 
