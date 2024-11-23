@@ -33,12 +33,12 @@
   
   .title {
     font-family: 'Poppins', sans-serif; /* Use Poppins font for bold, clean look */
-    font-size: 2.0rem; /* Adjust font size for DISCOVERY */
+    font-size: 2.7rem; /* Adjust font size for DISCOVERY */
     color: #4a4ae0; /* Blue color for DISCOVERY */
     font-weight: 900; /* Make DISCOVERY bold */
     margin: 0;
     text-transform: uppercase; /* Ensure DISCOVERY is all uppercase */
-    letter-spacing: 5px; /* Spacing between the letters */
+    letter-spacing: 2px; /* Spacing between the letters */
     display: block; /* Ensures DISCOVERY is treated as a block element */
     line-height: 1.2; /* Adjust spacing between lines */
     
@@ -46,14 +46,14 @@
   
   .world {
     font-family: 'Poppins', sans-serif; /* Use the same font */
-    font-size: 2rem; /* Slightly smaller size for WORLD */
+    font-size: 2.6rem; /* Slightly smaller size for WORLD */
     color: transparent; /* Transparent fill */
     -webkit-text-stroke: 1px #4a4ae0; /* Blue outline */
     font-weight: 700;
     margin-top: 0; /* No extra margin */
     text-transform: uppercase; /* Ensure WORLD is all uppercase */
     margin-top: -10px; /* Optional: Adjust spacing between lines */
-    letter-spacing: 5px; /* Spacing between the letters */
+    letter-spacing: 3px; /* Spacing between the letters */
     display: block; /* Ensures WORLD is treated as a block element */
   }
   
