@@ -28,6 +28,7 @@
   /* Title Section */
   .title-container {
     text-align: center;
+    flex-grow: 1; /* Allow title to take up remaining space */
   }
   
   .title {
@@ -39,6 +40,7 @@
     text-transform: uppercase; /* Ensure DISCOVERY is all uppercase */
     display: block; /* Ensures DISCOVERY is treated as a block element */
     line-height: 1.2; /* Adjust spacing between lines */
+    
   }
   
   .world {
