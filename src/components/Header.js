@@ -1,11 +1,12 @@
 // src/components/Header.js
 import React from "react";
-import '../styles/Header.css'; // If Header.css is in a 'styles' folder within 'src'
 
 function Header() {
   return (
-    <header className="header">
-      <h1>DISCOVERY<span className="world">WORLD</span></h1>
+    <header className="d-flex justify-content-center align-items-center bg-light border-bottom py-3">
+      <h1 className="display-4 fw-bold text-dark m-0">
+        DISCOVERY <span className="text-primary fw-normal">WORLD</span>
+      </h1>
     </header>
   );
 }

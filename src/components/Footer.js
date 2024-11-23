@@ -1,10 +1,10 @@
-// src/components/Footer.js
 import React from "react";
+import "../styles/Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <p>Curious Toucan</p>
+      <p>&copy; 2024 Discovery World. All rights reserved.</p>
     </footer>
   );
 }
