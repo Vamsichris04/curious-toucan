@@ -1,0 +1,8 @@
+.toucan-image {
+    position: absolute;
+    bottom: -60px; /* Adjust position */
+    right: -40px;
+    width: 120px;
+    transform: translateY(-50%);
+  }
+  
