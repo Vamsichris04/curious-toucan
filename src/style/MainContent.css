@@ -2,7 +2,7 @@
 .main-content {
   padding: 40px;
   position: relative;
-  padding-bottom: 150px;
+  padding-bottom: 150px; /* Adds more space above the footer */
 }
 
 /* Speech bubble for Toucan */
@@ -16,9 +16,9 @@
   text-align: left;
   line-height: 1.5;
   position: fixed;
-  bottom: 200px; /* Positioned above the Toucan */
-  right: 180px; /* Aligned with the Toucan */
-  z-index: 10; /* Ensure it's above other elements */
+  bottom: 120px; /* Positioned closer to the footer */
+  right: 180px; /* Positioned horizontally relative to the Toucan */
+  z-index: 10;
 }
 
 .speech-bubble:after {
@@ -35,41 +35,29 @@
 /* Toucan image */
 .toucan-image {
   position: fixed;
-  bottom: 100px; /* Fixed distance from the bottom of the screen */
-  right: 30px; /* Fixed distance from the right of the screen */
+  bottom: 50px; /* Moved closer to the footer */
+  right: 30px; /* Aligned to the right */
   max-width: 150px; /* Same size as the Astronaut */
   height: auto; /* Maintain aspect ratio */
-  z-index: 10; /* Ensure it's above other elements */
-}
-
-/* Buttons remain unchanged */
-.button-container button {
-  background-color: #4a4ae0;
-  color: white;
-  border: 2px solid black;
-  border-radius: 50%;
-  margin: 10px;
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
+  z-index: 10;
 }
 
 /* Astronaut container */
 .astronaut-container {
   position: fixed;
-  bottom: 100px;
-  left: 30px;
+  bottom: 50px; /* Moved closer to the footer */
+  left: 30px; /* Aligned to the left */
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }
 
 .astronaut-image {
-  max-width: 150px;
-  height: auto;
+  max-width: 150px; /* Same size as the Toucan */
+  height: auto; /* Maintain aspect ratio */
 }
 
-/* Audio box */
+/* Audio box (optional for the astronaut) */
 .audio-box {
   margin-top: 10px;
   padding: 10px;
