@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Conversation from "./Conversation";
 import InputBar from "./InputBar";
 import "../style/MainContent.css";
+import "../style/chat.css";
 
 const MainContent = () => {
   const [messages, setMessages] = useState([]);
