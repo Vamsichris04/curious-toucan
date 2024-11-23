@@ -1,33 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap');
+
+
 .header {
     display: flex;
     align-items: center;
-    justify-content: center left;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 10px 20px;
     background-color: white;
     border-bottom: 2px solid #ddd;
     position: sticky;
     top: 0;
+    /* width: 100%; */
+    z-index: 1000; /* Ensure header is above other elements */
+    height: 70px; /* Set a fixed height */
+  }
+
+  /* Logo Section */
+  .logo-container {
+    display: flex;
+    align-items: center;
   }
   
   .logo {
-    max-width: 120px;
-    margin-right: 15px;
+    max-width: 80px;
   }
   
+/* Title Section */
+.title-container {
+  text-align: center;
+  flex-grow: 1; /* Allow title to take up remaining space */
+}
+
 .title {
-    font-size: 2rem;
-    color: #333;
-    font-weight: 800;
-    line-height: 1;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font for bold, clean look */
+  font-size: 2.0rem; /* Adjust font size for DISCOVERY */
+  color: #4a4ae0; /* Blue color for DISCOVERY */
+  font-weight: 900; /* Make DISCOVERY bold */
+  margin: 0;
+  text-transform: uppercase; /* Ensure DISCOVERY is all uppercase */
+  display: block; /* Ensures DISCOVERY is treated as a block element */
+  line-height: 1.2; /* Adjust spacing between lines */
+  
 }
 
 .world {
-    color: #4a4ae0;
-    font-weight: 700;
+  font-family: 'Poppins', sans-serif; /* Use the same font */
+  font-size: 2rem; /* Slightly smaller size for WORLD */
+  color: transparent; /* Transparent fill */
+  -webkit-text-stroke: 1px #4a4ae0; /* Blue outline */
+  font-weight: 700;
+  text-transform: uppercase; /* Ensure WORLD is all uppercase */
+  margin-top: -10px; /* Optional: Adjust spacing between lines */
+  display: block; /* Ensures WORLD is treated as a block element */
 }
-  
-  .menu-icon {
-    font-size: 2rem;
-    cursor: pointer;
-  }
+
+/* Language Selector Section */
+.language-selector {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.flag {
+  width: 40px; /* Adjust flag size */
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.flag:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
   

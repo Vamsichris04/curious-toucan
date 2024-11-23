@@ -1,13 +1,41 @@
 import React from "react";
 import "../style/Header.css";
 import logo from "../assets/Discovery_world_logo.png";
-import '../style/Header.css'; // If Header.css is in a 'styles' folder within 'src'
+import usaFlag from "../assets/usa.jpeg";
+import spainFlag from "../assets/spain.jpeg";
+
 
 function Header() {
   return (
     <header className="header">
-      <img src={logo} alt="Discovery World Logo" className="logo" />
-      <h1>DISCOVERY <span className="world">WORLD</span></h1>
+      {/* Left Logo Section */}
+      <div className="logo-container">
+        <img src={logo} alt="Discovery World Logo" className="logo" />
+      </div>
+
+      {/* Title Section */}
+      <div className="title-container">
+        <h1 className="title">
+          DISCOVERY
+          <span className="world">WORLD</span>
+        </h1>
+      </div>
+
+      {/* Language Selector */}
+      <div className="language-selector">
+        <img
+          src={usaFlag}
+          alt="English"
+          className="flag"
+          title="Switch to Englishh"
+        />
+        <img
+          src={spainFlag}
+          alt="Spanish"
+          className="flag"
+          title="Switch to Spanish"
+        />
+      </div>
     </header>
   );
 }
