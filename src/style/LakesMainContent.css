@@ -1,0 +1,136 @@
+/* Great Lakes Page Styling */
+.great-lakes-container {
+    width: 100%;
+    height: calc(100vh - 0px); /* Full-screen height */
+    background-image: url("../assets/Great_Lakes.png");
+    background-repeat: no-repeat;
+    background-size: 70% 90%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    color: white; /* Make text stand out against the background */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .back-button {
+    background-color: #4a4ae0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #3a3ac0;
+  }
+  .great-lakes-container {
+    width: 100%;
+    height: calc(100vh - 0px); /* Full-screen height */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the full area */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  /* Back Button Styling */
+  .button-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .back-button {
+    background-color: #4a4ae0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #3a3ac0;
+  }
+  
+  /* Wrapper for the lake buttons */
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Common styles for all lake buttons */
+  .lake-button {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease;
+  }
+  
+  .lake-button img {
+    width: 80px;
+    height: auto;
+    pointer-events: none; /* Prevent the image itself from being clicked */
+  }
+  
+  .lake-button:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  /* Positioning each lake button */
+  .superior {
+    top: 15%;
+    left: 25%;
+  }
+  
+  .huron {
+    top: 35%;
+    left: 60%;
+  }
+  
+  .michigan {
+    top: 50%;
+    left: 40%;
+  }
+  
+  .erie {
+    bottom: 20%;
+    left: 65%;
+  }
+  
+  .ontario {
+    bottom: 15%;
+    left: 75%;
+  }

@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/Header.css";
+import { Link } from "react-router-dom";
 import logo from "../assets/Discovery_world_logo.png";
 import usaFlag from "../assets/usa.jpeg";
 import spainFlag from "../assets/spain.jpeg";
@@ -35,6 +36,10 @@ function Header() {
           className="flag"
           title="Switch to Spanish"
         />
+        {/* Great Lakes Button */}
+        { <Link to="/great-lakes" className="great-lakes-link">
+          <button className="great-lakes-button">Great Lakes</button>
+        </Link> }
       </div>
     </header>
   );

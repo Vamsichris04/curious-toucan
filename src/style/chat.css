@@ -1,5 +1,4 @@
 .chat-container {
-<<<<<<< HEAD
     width: 100%;
     height: 100vh; /* Takes up the full height of the screen */
     padding: 20px;
@@ -80,14 +79,7 @@
   strong {
     font-weight: bold;
   }
-=======
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  padding-bottom: 70px; /* Add space for the input bar */
-  background-color: #ffffff;
-  overflow-y: auto;
-}
+
 
 .chat-display {
   display: flex;
@@ -157,4 +149,3 @@
 strong {
   font-weight: bold;
 }
->>>>>>> ded151090870ba6b2ee05fd4bc521efb7aed211e

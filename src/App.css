@@ -10,3 +10,10 @@ html, body, .app {
   display: flex;
   flex-direction: column; /* Stack children vertically */
 }
+.main-content {
+  margin-top: 30px; /* Adjust this value to match the header's height */
+}
+.page-content {
+  margin-top: 30px; /* Adjust this value to match the header's height */
+
+}
