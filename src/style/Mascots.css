@@ -1,19 +1,16 @@
 .mascot-container {
-    position: absolute; /* Enables positioning relative to the closest positioned parent */
-    top: 77px; /* Adjust distance from the top */
+    position: relative; /* Enables positioning relative to the closest positioned parent */
     left: 20px; /* Adjust distance from the right */
     display: flex; /* Keeps the flex layout for mascots */
     gap: 10px; /* Space between mascots */
-    z-index: 10; /* Ensures it appears above other content if overlapping occurs */
 }
+
 
 .mascot-display {
     position: fixed;
-    bottom: 100px; /* Fixed distance from the bottom of the screen */
     right: 50px; /* Fixed distance from the right of the screen */
     max-width: 150px; /* Same size as the Astronaut */
     height: auto; /* Maintain aspect ratio */
-    z-index: 10; /* Ensure it's above other elements */
   }
 
   .selected-mascot {

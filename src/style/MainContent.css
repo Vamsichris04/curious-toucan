@@ -1,13 +1,27 @@
 .main-content {
   width: 100%;
   height: 100%;
+  background-color: blue;
   overflow: hidden;
   align-items: flex-start; /* Align items to the top */
   justify-content: center;
-  background-color: white;
+  /* background-color: white; */
   border-bottom: 2px solid #ddd;
   position: relative; /* Position child elements relative to this container */
-  padding-top: 75px; /* Adjust this value based on the height of your header */
+}
+
+.main-content-fix {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread content evenly */
+  padding: 10px 10px;
+  background-color: white;
+  border-bottom: 2px solid #ddd;
+  position: fixed;
+  top: 120px;
+  width: 100%;
+  z-index: 1000; /* Ensure header is above other elements */
+  height: 90px; /* Set a fixed height */
 }
 
 /* Button container styles */
@@ -25,11 +39,14 @@
 .chatbot-container {
   width: 100%; /* Full width of the screen */
   height: 80vh; /* Take 80% of the viewport height */
-  margin-top: 12vh; /* Offset the container from the top by 20% */
   display: flex;
   flex-direction: column; 
   background-color: white; /* Optional background color */
   overflow-y: auto; /* Enable scrolling for the content if necessary */
+  position: fixed;
+  top: 130px;
+  padding: 10px 0;
+  height: 490px;
 }
 
 .header-container {
