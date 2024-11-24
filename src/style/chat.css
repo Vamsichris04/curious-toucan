@@ -4,7 +4,6 @@
     height: 100vh; /* Takes up the full height of the screen */
     padding: 20px;
     padding-bottom: 70px; /* Add space for the input bar */
-  
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
@@ -30,8 +29,25 @@
   .right {
     justify-content: flex-end;
   }
-  
-  .message-content {
+
+  .message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+.right .message-avatar {
+  margin-left: 10px; /* Maintain small spacing to the left of the speech bubble */
+  margin-right: 0; /* Remove excess space between the avatar and the right edge */
+}
+
+.left .message-avatar {
+  margin-right: 10px; /* Standard spacing */
+  margin-left: 0;
+}
+
+.message-content {
     display: flex;
     align-items: center;
   }
@@ -53,10 +69,12 @@
   
   .left .speech-bubble {
     background-color: #e1f5fe;
+    margin-left: 10px; /* Maintain small spacing to the left of the speech bubble */
   }
   
   .right .speech-bubble {
     background-color: #c8e6c9;
+    margin-right: 10px; /* Maintain small spacing to the right of the speech bubble */
   }
   
   strong {
