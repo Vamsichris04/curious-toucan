@@ -1,7 +1,9 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import "../style/MainContent.css";
+import UserImage from "../assets/user_cutout.png";
 
-const Message = ({ sender, content }) => {
+const Message = ({ sender, content, currentImage}) => {
   const isUser = sender === "user";
 
   return (
@@ -11,17 +13,17 @@ const Message = ({ sender, content }) => {
         {!isUser && (
           <img
             className="message-avatar"
-            src="/Toucan.png"
+            src={currentImage}
             alt="Agent"
           />
         )}
         <div className="speech-bubble">
-          <strong>{isUser ? "You" : "Agent"}:</strong> {content}
+          <ReactMarkdown>{content}</ReactMarkdown>
         </div>
         {isUser && (
           <img
             className="message-avatar"
-            src="/Toucan.png"
+            src={UserImage}
             alt="User"
           />
         )}

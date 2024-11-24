@@ -1,0 +1,52 @@
+.mascot-container {
+    position: absolute; /* Enables positioning relative to the closest positioned parent */
+    top: 77px; /* Adjust distance from the top */
+    left: 20px; /* Adjust distance from the right */
+    display: flex; /* Keeps the flex layout for mascots */
+    gap: 10px; /* Space between mascots */
+    z-index: 10; /* Ensures it appears above other content if overlapping occurs */
+}
+
+.mascot-display {
+    position: fixed;
+    bottom: 100px; /* Fixed distance from the bottom of the screen */
+    right: 50px; /* Fixed distance from the right of the screen */
+    max-width: 150px; /* Same size as the Astronaut */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Ensure it's above other elements */
+  }
+
+  .selected-mascot {
+    width: 200px;           /* Control the size of the displayed mascot image */
+    height: auto;           /* Maintain aspect ratio of the image */
+    border-radius: 10px;    /* Optional: rounded corners for the image */
+    transition: transform 0.3s ease-in-out; /* Smooth transition when changing mascot */
+  }
+
+  .mascot {
+    text-align: center; /* Center the image and label */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }
+
+  .mascot-image {
+    width: 70px; /* Adjust size as needed */
+    height: 55px; /* Maintain aspect ratio */
+    transition: transform 0.2s; /* Add hover effect */
+  }
+
+  .mascot-image:hover {
+    transform: scale(1.1); /* Enlarge slightly on hover */
+    color: #ff9900;
+  }
+
+  .mascot-label {
+    margin-top: 6px; /* Space between image and label */
+    font-size: 12px; /* Adjust label size */
+    color: #333; /* Label color */
+    text-align: center; /* Align text directly under the mascot */
+    text-transform: capitalize; /* Make labels look uniform */
+    font-family: 'Arial', sans-serif; /* Use a clean, readable font */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+    font-weight: 600;
+  }
+ 

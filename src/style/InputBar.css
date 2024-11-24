@@ -49,6 +49,10 @@
     color: white;
     box-shadow: 0 2px 10px rgba(255, 87, 34, 0.6); /* Subtle shadow effect */
   }
+
+  .audio-button:hover {
+    background-color: #ff5722; /* Hover effect for the microphone button */
+  }
   
   .send-button {
     background-color: #4caf50;

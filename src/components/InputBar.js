@@ -2,10 +2,15 @@ import React, { useState, useRef } from "react";
 import "../style/InputBar.css";
 
 const InputBar = ({ onSendMessage, onSendAudio }) => {
-  const [message, setMessage] = useState("");
   const [isRecording, setIsRecording] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
+  const [inputValue, setInputValue] = useState("");
   const audioChunks = useRef([]); // Use a ref to store audio chunks
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+  
 
   const handleStartRecording = async () => {
     try {
@@ -47,19 +52,18 @@ const InputBar = ({ onSendMessage, onSendAudio }) => {
     }
   };
 
-  const handleInputChange = (e) => setMessage(e.target.value);
-
-  const handleSendClick = () => {
-    if (message.trim()) {
-      onSendMessage(message);
-      setMessage("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (inputValue.trim()) {
+      onSendMessage(inputValue); // Pass the input to the parent component
+      setInputValue(""); // Clear the input field
     }
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === "Enter" && message.trim()) {
-      onSendMessage(message); // Trigger sending the message
-      setMessage(""); // Clear the input field
+    if (event.key === "Enter" && inputValue.trim()) {
+      onSendMessage(inputValue); // Trigger sending the message
+      setInputValue(""); // Clear the input field
     }
   };
 
@@ -75,11 +79,11 @@ const InputBar = ({ onSendMessage, onSendAudio }) => {
         className="input-field"
         type="text"
         placeholder="Type a message..."
-        value={message}
+        value={inputValue}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown} // Listen for Enter key press
       />
-      <button className="send-button" onClick={handleSendClick}>
+      <button className="send-button" onClick={handleSubmit}>
         ➤
       </button>
     </div>
