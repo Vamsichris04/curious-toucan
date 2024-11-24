@@ -3,8 +3,9 @@ import Conversation from "./Conversation";
 import InputBar from "./InputBar";
 import "../style/MainContent.css";
 import "../style/chat.css";
-
+import AudioPlayer from "./AudioPlayer";
 const MainContent = () => {
+  const lastUserMessage = "empty";
   const [messages, setMessages] = useState([
     { sender: "agent", content: "Hello! How can I help you today?" }, // Example starter message
   ]);
@@ -26,7 +27,7 @@ const MainContent = () => {
     handleAnswer();
   };
 
-  const handleAnswer = () =>{
+  const handleAnswer = (input) =>{
     setMessages((prevMessages) => [
       ...prevMessages,
       { sender: "Agent", content: "I am the agent" },
@@ -42,6 +43,10 @@ const MainContent = () => {
   return (
     <div className="main-content">
       <Conversation messages={messages} />
+      <AudioPlayer 
+        input={lastUserMessage}
+        onAudioResponse={handleSendMessage}
+      />
       <InputBar onSendMessage={HandleConversation} onSendAudio={handleSendAudio}/>
     </div>
   );
