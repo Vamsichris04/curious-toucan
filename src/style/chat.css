@@ -1,5 +1,5 @@
-
 .chat-container {
+<<<<<<< HEAD
     width: 100%;
     height: 100vh; /* Takes up the full height of the screen */
     padding: 20px;
@@ -80,3 +80,81 @@
   strong {
     font-weight: bold;
   }
+=======
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  padding-bottom: 70px; /* Add space for the input bar */
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.chat-display {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.message-content {
+  display: flex;
+  align-items: center;
+}
+
+.message-avatar {
+  width: 60px;
+  height: auto;
+  margin: 5px;
+}
+
+.message-avatar-user {
+  width: 60px;
+  height: auto;
+  margin: 5px;
+}
+
+.left .speech-bubble::after, .right .speech-bubble::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  display: none; /* Disable arrow by default */
+}
+
+.speech-bubble {
+  position: relative;
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  word-wrap: break-word;
+  box-shadow: none; /* Prevent unintended shadows */
+}
+
+.left .speech-bubble {
+  background-color: #e1f5fe;
+  margin-left: 20px;
+}
+
+
+.right .speech-bubble {
+  background-color: #c8e6c9;
+  margin-right: 20px;
+}
+
+strong {
+  font-weight: bold;
+}
+>>>>>>> ded151090870ba6b2ee05fd4bc521efb7aed211e
