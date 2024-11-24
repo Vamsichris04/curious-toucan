@@ -5,20 +5,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between; /* Spread content evenly */
-    padding: 10px 20px;
+    padding: 10px 10px;
     background-color: white;
     border-bottom: 2px solid #ddd;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000; /* Ensure header is above other elements */
-    height: 70px; /* Set a fixed height */
+    height: 120px; /* Set a fixed height */
   }
   
   /* Logo Section */
   .logo-container {
     display: flex;
     align-items: center;
+    padding-right: 30px;
   }
   
   .logo {
