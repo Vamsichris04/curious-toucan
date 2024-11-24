@@ -16,11 +16,14 @@ const MainContent = () => {
     ]);
   };
 
-  const handleSendAudio = () => {
+  const handleSendAudio = (audioBlob) => {
+    // Create an object URL for the audio blob to play in the browser
+    const audioUrl = URL.createObjectURL(audioBlob);
     setMessages((prevMessages) => [
       ...prevMessages,
-      { sender: "user", content: "[Audio Message Sent]" },
+      { sender: "user", content: "AUDIO CONNECT API" }, // Display the audio player
     ]);
+    handleAnswer();
   };
 
   const handleAnswer = () =>{
@@ -29,6 +32,7 @@ const MainContent = () => {
       { sender: "Agent", content: "I am the agent" },
       //MAKE API CALL
     ]);
+
   }
 
   const HandleConversation = (message) => {
