@@ -5,9 +5,6 @@ import "../style/MainContent.css";
 // import "../style/chat.css";
 // import "../style/Mascots.css"
 import ToucanImage from "../assets/toucan_cutout_fr.png";
-import TurtleImage from "../assets/turtle_pic_fr.png";
-import SlothImage from "../assets/sloth_cutout_fr.png";
-import MascotStuff from "./Mascots";
 import Header from "./Header";
 
 const MainContent = () => {

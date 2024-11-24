@@ -26,7 +26,7 @@ const MascotStuff = ({ setMascotImages, setMessage }) => {
       <div className="mascot-container">
         <div className="mascot" onClick={() => handleMascotClick("turtle")}>
           <img src={TurtleImage} alt="Turtle" className="mascot-image" />
-          <p className="mascot-label">Timmy the Turtle</p>
+          <p className="mascot-label">Simple Turtle</p>
         </div>
         <div className="mascot" onClick={() => handleMascotClick("toucan")}>
           <img src={ToucanImage} alt="Toucan" className="mascot-image" />

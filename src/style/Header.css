@@ -7,7 +7,7 @@
     justify-content: space-between; /* Spread content evenly */
     padding: 10px 10px;
     background-color: white;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
     position: fixed;
     top: 0;
     width: 100%;
@@ -15,21 +15,30 @@
     height: 120px; /* Set a fixed height */
   }
   
-  /* Logo Section */
-  .logo-container {
+  /* Logo and Title Container */
+  .logo-title-container {
     display: flex;
     align-items: center;
-    padding-right: 30px;
+    gap: 15px;
+    position: absolute;
+    left: 36%; /* Align to the right with 20px of space */
   }
   
+
+.title-container {
+  text-align: center;  /* Center the text */
+  display: flex;
+  flex-direction: column;  /* Stack the title and world */
+  justify-content: center;  /* Vertically center the text */
+  align-items: center;  /* Horizontally center the text */
+  gap: 3px;  /* Space between the two words */
+}
+
   .logo {
-    max-width: 80px;
-  }
-  
-  /* Title Section */
-  .title-container {
-    text-align: center;
-    flex-grow: 1; /* Allow title to take up remaining space */
+    max-width: 70px;
+    height: auto;
+    border: 2px solid black; /* Adds a thin black border */
+    padding: 5px; 
   }
   
   .title {
