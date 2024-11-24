@@ -30,7 +30,7 @@ const MainContent = () => {
     handleAnswer(message); // Trigger the API call and response handling
   };
 
-  const handleAnswer = async (input) => {
+  const handleAnswer = async (input, promptLanguage, use_history = true) => {
     try {
       // Make the API call to the FastAPI server
       const response = await fetch("http://localhost:8080/predict/text", {
@@ -38,7 +38,7 @@ const MainContent = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ prompt: { text: input }, difficulty: { state: 2 } }),
+        body: JSON.stringify({ prompt: { text: input, language : promptLanguage, use_history : use_history }, difficulty: { state: 2 }}),
       });
 
       if (!response.ok) {
@@ -131,8 +131,13 @@ const MainContent = () => {
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
-    // You could trigger a language-specific answer here if needed
-    handleAnswer(`Switch to ${newLanguage}`); // Optional, you can add logic for specific responses
+    if (newLanguage == 'es'){
+      handleAnswer(`Repite conmigo: 'Hemos cambiado de idioma al espanol'`, newLanguage, false)
+
+    } else{
+      handleAnswer(`Repeat after me: 'We have switched languages to english`, newLanguage, false)
+
+    }
   };
 
   return (
