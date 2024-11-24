@@ -91,15 +91,46 @@ const MainContent = () => {
     }
   };
 
-  const handleSendAudio = () => {
-    setMessages((prevMessages) => [
-      ...prevMessages,
-      { sender: "user", content: "[Audio Message Sent]" },
-    ]);
-    setMascotImages((prevImages) => [
-      ...prevImages,
-      prevImages[prevImages.length - 1], // Add the same mascot image for the new message
-    ]);
+  const handleSendAudio = async (audioBlob) => {
+    try {
+      const file = new File([audioBlob], "audio.wav", { type: "audio/wav" });
+      // Create FormData to send audioBlob
+      const formData = new FormData();
+      formData.append("file", file, "audio.wav");
+      formData.append("language", "en"); // Optionally add language
+      
+      // Send the audio file to the backend
+      const response = await fetch("http://localhost:8080/predict/audio", {
+        method: "POST",
+        body: formData, // Pass FormData object
+      });
+      
+      if (!response.ok) {
+        throw new Error("Failed to fetch audio response from the server.");
+      }
+      
+      const data = await response.json(); // Parse the JSON response
+      
+      // Add the agent's response to the messages
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { sender: "user", content: data.response },
+      ]);
+
+      setMascotImages((prevImages) => [
+        ...prevImages,
+        prevImages[prevImages.length - 1], 
+      ]);
+  
+      handleAnswer(data.response);
+      
+    } catch (error) {
+      console.error("Error sending audio:", error);
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { sender: "agent", content: "Sorry, I encountered an error while processing the audio." },
+      ]);
+    }
   };
 
   
