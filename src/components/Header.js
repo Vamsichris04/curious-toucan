@@ -59,7 +59,7 @@ const Header = ({ handleLanguageChange, setMascotImages,setMessage }) => {
           src={usaFlag}
           alt="English"
           className="flag"
-          title="Switch to Englishh"
+          title="Switch to English"
           onClick={() => handleLanguageChange("en")} // Change to English
 
         />

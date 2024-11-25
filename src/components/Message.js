@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import "../style/MainContent.css";
-import UserImage from "../assets/user_cutout.png";
+import UserImage from "../assets/astronaught.jpeg";
 
 const Message = ({ sender, content, currentImage}) => {
   const isUser = sender === "user";
